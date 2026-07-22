@@ -424,7 +424,6 @@ async function sendMessage() {
 
   chatHistory.push({ role: 'user', content: text });
   el.chatInput.value = '';
-  autoGrowInput();
   renderMessages();
   showTypingIndicator();
   setSending(true);
@@ -457,12 +456,7 @@ async function sendMessage() {
   }
 }
 
-function autoGrowInput() {
-  el.chatInput.style.height = 'auto';
-  el.chatInput.style.height = `${Math.min(el.chatInput.scrollHeight, 96)}px`;
-}
 
-el.chatInput.addEventListener('input', autoGrowInput);
 el.chatInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' && !event.shiftKey) {
     event.preventDefault();

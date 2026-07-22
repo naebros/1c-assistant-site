@@ -593,7 +593,7 @@ button {
   font-size: .875rem;
   color: rgba(255, 255, 255, .8);
   resize: none;
-  max-height: 6rem;
+  height: 2.75rem;
   outline: none;
   transition: border-color .15s ease;
 }
