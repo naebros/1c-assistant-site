@@ -37,7 +37,7 @@ body {
 
 img, svg { display: block; max-width: 100%; }
 
-html, body { overflow-x: hidden; }
+body { overflow-x: hidden; }
 
 a { color: inherit; }
 
@@ -214,7 +214,7 @@ button {
   transition: opacity .4s ease;
 }
 
-#hero-canvas {
+#heroCanvas {
   position: absolute;
   inset: 0;
   width: 100%;
