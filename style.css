@@ -244,10 +244,13 @@ button {
 
 .hero-actions {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 20rem;
+  margin-inline: auto;
 }
 
 .btn-primary {
@@ -257,6 +260,7 @@ button {
   border: none;
   border-radius: var(--radius-md);
   font-weight: 500;
+  text-align: center;
   transition: background-color .15s ease;
 }
 
@@ -268,6 +272,7 @@ button {
   border-radius: var(--radius-md);
   color: #d4d4d4;
   text-decoration: none;
+  text-align: center;
   transition: background-color .15s ease;
 }
 
@@ -658,9 +663,6 @@ button {
 }
 
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; width: 100%; }
-  .hero-actions .btn-primary,
-  .hero-actions .btn-outline { width: 100%; text-align: center; }
   .step { flex-direction: column; text-align: center; }
   .card { padding: 1.25rem; }
 }
