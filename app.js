@@ -101,6 +101,8 @@ const el = {
   navbar: document.getElementById('navbar'),
   hero: document.getElementById('hero'),
   langBtn: document.getElementById('langBtn'),
+  menuBtn: document.getElementById('menuBtn'),
+  navLinks: document.getElementById('navLinks'),
   featuresGrid: document.getElementById('features-grid'),
   installSteps: document.getElementById('install-steps'),
   chatMessages: document.getElementById('chatMessages'),
@@ -209,6 +211,18 @@ el.langBtn.addEventListener('click', () => {
   lang = lang === 'ru' ? 'en' : 'ru';
   localStorage.setItem('lang', lang);
   applyLang();
+});
+
+el.menuBtn.addEventListener('click', () => {
+  el.menuBtn.classList.toggle('active');
+  el.navLinks.classList.toggle('open');
+});
+
+el.navLinks.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    el.menuBtn.classList.remove('active');
+    el.navLinks.classList.remove('open');
+  });
 });
 
 // -----------------------------------------------------------------
