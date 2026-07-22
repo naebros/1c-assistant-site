@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Wrangler local state / build output
+.wrangler/
+worker/dist/
+
+# Environment files — never commit real secrets.
+# GROQ_API_KEY itself is NOT stored in any file (set via `wrangler secret put`),
+# but if you ever create a .env for local testing, keep it out of git.
+.env
+.env.*
+!.env.example
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+
+# Old/legacy file — the API key must never be committed again.
+# If you still have this file locally, delete it; it's no longer used.
+config.js
